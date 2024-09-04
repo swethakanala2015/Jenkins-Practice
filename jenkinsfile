@@ -34,8 +34,9 @@ pipeline {
                 sh 'echo This is Deploy'  
             }
         }
+        stages{
         stage('print params') {
-            stages {
+            steps {
                 echo "Hello ${params.PERSON}"
 
                 echo "Biography: ${params.BIOGRAPHY}"
