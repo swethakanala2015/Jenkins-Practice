@@ -34,7 +34,7 @@ pipeline {
                 sh 'echo This is Deploy'  
             }
         }
-        stage("print params"){
+        stage('print params'){
             stages {
                 echo "Hello ${params.PERSON}"
 
@@ -45,7 +45,7 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
-                
+
                 echo "triggered test"
             }
         }
