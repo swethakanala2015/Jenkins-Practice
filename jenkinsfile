@@ -3,8 +3,8 @@ pipeline {
          label 'AGENT-1'
     }
     options {
-        skipStagesAfterUnstable()
-    }
+                timeout(time: 1, unit: 'SECONDS')
+                disableConcurrentBuilds()
     stages {
         stage('Build') { 
             steps { 
